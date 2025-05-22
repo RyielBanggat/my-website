@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore and buy top-of-the-line luxury cars. Schedule a test drive or subscribe for updates." />
+  <title>Luxury Drive | Exclusive Luxury Cars</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Hero section styling */
+    .hero {
+      background: linear-gradient(rgba(48, 41, 41, 0.6), rgba(52, 46, 46, 0.6)),
+                  url('bj.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-family: 'Georgia', serif;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      background-color: gold;
+      color: black;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e6c200;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      color: #000000;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .review-date {
+      font-size: 0.9rem;
+      color: #000000;
+      margin-top: 5px;
+    }
+
+    /* Featured Cars section with background */
+    .features {
+      background: linear-gradient(rgba(18, 17, 17, 0.85), rgba(46, 41, 41, 0.85)),
+                  url('t.jpg') center/cover no-repeat;
+      padding: 60px 20px;
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Mobile Mode Button -->
+  <button id="mobileToggle">Toggle Mobile Mode</button>
+
+  <header class="hero">
+    <h1>Luxury Drive</h1>
+    <p>Unleash performance, elegance, and innovation with our premium car collection.</p>
+    <a href="#signup" class="cta-button">Book a Test Drive</a>
+  </header>
+
+  <main>
+    <section class="features" id="features">
+      <h2>Our Featured Cars</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <img src="sedan.jpg" alt="Luxury Sedan">
+          <h3>Luxury Sedan</h3>
+          <p>Experience smooth rides with top-class comfort and tech.</p>
+          <p class="price">₱4,200,000</p>
+        </div>
+        <div class="card">
+          <img src="suv.jpg" alt="Luxury SUV">
+          <h3>Premium SUV</h3>
+          <p>Power, space, and style in one luxurious package.</p>
+          <p class="price">₱5,800,000</p>
+        </div>
+        <div class="card">
+          <img src="sportscar.jpg" alt="Sports Car">
+          <h3>Sports Edition</h3>
+          <p>Speed and elegance with high-end performance.</p>
+          <p class="price">₱7,300,000</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <img src="pic1.jpg" alt="Marie L." class="client-photo">
+          <blockquote>"Absolutely stunning cars! My SUV feels like a spaceship."</blockquote>
+          <p class="client-name">– Marie L.</p>
+          <p class="review-date">Reviewed on January 12, 2025</p>
+        </div>
+        <div class="testimonial-card">
+          <img src="pic2.jpg" alt="Jordan M." class="client-photo">
+          <blockquote>"Service was excellent and the sports car I bought turns heads."</blockquote>
+          <p class="client-name">– Jordan M.</p>
+          <p class="review-date">Reviewed on February 5, 2025</p>
+        </div>
+        <div class="testimonial-card">
+          <img src="bangag.jpg" alt="Rico D." class="client-photo">
+          <blockquote>"Best dealership experience I've had. Totally worth it."</blockquote>
+          <p class="client-name">– Rico D.</p>
+          <p class="review-date">Reviewed on March 18, 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form" id="signup">
+      <h2>Book a Test Drive or Inquire Now</h2>
+      <form action="submit.php" method="POST" id="signupForm">
+        <label for="name">Name*</label>
+        <input type="text" name="name" id="name" required />
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" required />
+        <label for="message">Preferred Model or Message</label>
+        <textarea name="message" id="message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="#features">Cars</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#signup">Contact</a>
+    </nav>
+    <p>© 2025 Luxury Drive | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+
+  <script>
+    const button = document.getElementById('mobileToggle');
+    button.addEventListener('click', () => {
+      document.body.classList.toggle('mobile-mode');
+    });
+  </script>
+</body>
+</html>
